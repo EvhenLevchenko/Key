@@ -15,13 +15,13 @@ public class LotteryDrawning {
         System.out.println("What is the highest number you can draw?");
         int n = in.nextInt();
 
-        int[] numbers = new int[n];
+        int[] numbers = new int[n];//First from 0 to 9 by indecs if you enter 5 and 10
         for (int i = 0; i < numbers.length; i++)
             numbers[i] = i+1;
 
-        int[] result = new int[k];
+        int[] result = new int[k];// 0 to 4
         for (int i = 0; i < result.length; i++) {
-            int r = (int) (Math.random() * n);
+            int r = (int) (Math.random() * n);//twice generated random indeks from array n.// If it is 0 than number 1 will be has indeks 0 in arrayn k
             result[i] = numbers[r];
 
             numbers[r] = numbers[n - 1];
